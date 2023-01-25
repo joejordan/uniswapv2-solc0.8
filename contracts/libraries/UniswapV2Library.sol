@@ -35,7 +35,7 @@ library UniswapV2Library {
                             factory,
                             keccak256(abi.encodePacked(token0, token1)),
                             // below is the result of: keccak256(type(UniswapV2Pair).creationCode)
-                            hex"443533a897cfad2762695078bf6ee9b78b4edcda64ec31e1c83066cee4c90a7e"
+                            hex"a708c7fa37df9c327d28b424a78272e993d554a9097623bdf070446e4b5a2182"
                         )
                     )
                 )
