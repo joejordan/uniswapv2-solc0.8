@@ -5,6 +5,7 @@ pragma solidity ^0.8.4;
 //solhint-disable reason-string
 
 import "../interfaces/IUniswapV2Pair.sol";
+import "../UniswapV2Pair.sol";
 
 library UniswapV2Library {
     // returns sorted token addresses, used to handle return values from pairs sorted in this order
@@ -35,7 +36,8 @@ library UniswapV2Library {
                             factory,
                             keccak256(abi.encodePacked(token0, token1)),
                             // below is the result of: keccak256(type(UniswapV2Pair).creationCode)
-                            hex"a708c7fa37df9c327d28b424a78272e993d554a9097623bdf070446e4b5a2182"
+                            // hex"a708c7fa37df9c327d28b424a78272e993d554a9097623bdf070446e4b5a2182"
+                            keccak256(type(UniswapV2Pair).creationCode)
                         )
                     )
                 )
